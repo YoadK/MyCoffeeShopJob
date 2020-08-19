@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BB8C48</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorLightBrown">#DD4E15</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#FD0000</color>
+    <color name="colorBlue">#0019FD</color>
+    <color name="colorDarkBrown">#8F4000</color>
+    <color name="colorLightGray">#D8CEC7</color>
+    <color name="colorYellow">#FAFA04</color>
+    <color name="colorCyan">#04FAB4</color>
+    <color name="colorLightGray2">#E9F1ED</color>
+    <color name="colorLightOrangeBrown">#FB7A2C</color>
+
+    GH firebase colors
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
+
+    shopping cart item colors
+    <color name="grey_light">#E0E0E0</color>
+
+
+<!--    orders summary-->
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_black_1000">#000000</color>
+    <color name="md_amber_100">#FFECB3</color>
+    <color name="md_grey_900">#212121</color>
+    <color name="md_green_300">#81C784</color>
+    <color name="md_deep_orange_500">#FF5722</color>
+</resources>

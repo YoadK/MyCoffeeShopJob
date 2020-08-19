@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">My Coffee Shop App-V8</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_shoppingCart">Shopping Cart</string>
+    <string name="title_userprofile">User Profile</string>
+    <string name="title_orders">Orders</string>
+
+    <string name="text_home">This is home fragment</string>
+    <string name="text_shoppingcart">This is shopping cart fragment</string>
+    <string name="text_profile">This is profile fragment</string>
+
+    !-- login strings -->
+    <string name="loginImgContentDescription">login page image Content Description </string>
+    <string name="loginPageTitle">Login page  </string>
+    <string name="btn_loginPage_title">Login   </string>
+    <string name="loginEmailTextfieldHint">Enter your email here…</string>
+    <string name="loginPasswordTextfieldHint">Enter your Password here…</string>
+
+
+    !-- register strings -->
+    <string name="registerImgContentDescription">register page image Content Description </string>
+    <string name="registerPageTitle">Register page </string>
+    <string name="btn_registerPage_title">Register</string>
+    <string name="title_coffee_assistant_wizard">Coffee assistant (Wizard)</string>
+    <string name="shopping_cart_current_total_price">Current total Price:</string>
+    <string name="order_total_price">Total Price:</string>
+</resources>
+

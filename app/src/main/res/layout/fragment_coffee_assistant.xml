@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.CoffeeAssistantFragment">
+
+    <ScrollView
+        android:id="@+id/scrollViewAssistant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightGray2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_view_question_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="1. How do you usually make coffee at home?"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radio_group_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/radio_button1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Espresso Machine" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Moka pot" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Filter-coffee / turkish coffee" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instant coffee" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/coffee_png_11552953340zk1jjnd7x0" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_question_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="2. Do you add anything to your coffee?"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radio_group_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/radio_button1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Milk / Cream" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Syrup" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Sugar / sweetener" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Non-dairy milk" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A mix of these choices" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button6_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No,  it black" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/milk_carton_illustration" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_question_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="3. How do you like your coffee to taste?"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radio_group_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/radio_button1_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="weak / mild" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="standard flavor/taste" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Strong flavor taste" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button4_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I realy dont care" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/chocolate_tastingwheel_2015" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_question_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="4. What type of coffee do you drink?"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radio_group_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/radio_button1_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Regular" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button2_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Decaffeinated " />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/decaf5" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAssistant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:text="Find my Coffee!" />
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAssistant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp" />
+</LinearLayout>

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/user_profile_center_bottom_background_gradient"
+    android:orientation="vertical"
+    tools:context=".Fragments.UserProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/user_profile_top_background_gradient" />
+
+    <!--Top Header Layout-->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/coffee_break_icon"
+            android:padding="10dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/userProfileCardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:padding="6dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:padding="4dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/userProfileButtonEditDetails"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:backgroundTint="#EEE7EF"
+                android:fontFamily="@font/proximanovaregular"
+                android:gravity="center"
+                android:text="Edit"
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="14sp"
+                app:icon="@drawable/button_edit_icon_foreground"
+                app:iconSize="30sp"
+                app:iconTint="@color/colorDarkBrown"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/userProfileButtonSaveDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:backgroundTint="#EEE7EF"
+                android:fontFamily="@font/proximanovaregular"
+                android:gravity="center"
+                android:text="save"
+                android:textColor="@color/colorDarkBrown"
+                android:textSize="14sp"
+                app:icon="@drawable/button_save_icon_foreground"
+                app:iconSize="30dp"
+                app:iconTint="@color/colorDarkBrown"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorLightGray" />
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorLightGray" />
+                </LinearLayout>
+
+                <!--Bootom Cards with sections-->
+                <LinearLayout
+                    android:id="@+id/personalinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--user personal Details-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circularbordersolid"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proximanovaregular"
+                                android:text="User personal details"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="Email address"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/userProfileEmail"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/proximanovaregular"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="abcde@gmail.com" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="Full name"
+                                    android:textColor="#000000" />
+
+                                <EditText
+                                    android:id="@+id/userProfileName"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/proximanovaregular"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="moshe cohen" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="Date of birth"
+                                    android:textColor="#000000" />
+
+                                <EditText
+                                    android:id="@+id/userProfileDateOfBirth"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/proximanovaregular"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="01/01/1980" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="Phone number"
+                                    android:textColor="#000000" />
+
+                                <EditText
+                                    android:id="@+id/userProfilePhoneNumber"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/proximanovaregular"
+                                    android:inputType="phone"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="054-5-123456" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--address Details-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circularbordersolid"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="User address details"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="Street name"
+                                    android:textColor="#000000" />
+
+                                <EditText
+                                    android:id="@+id/userProfileStreetName"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="Ahuza " />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="Street number"
+                                    android:textColor="#000000" />
+
+                                <EditText
+                                    android:id="@+id/userProfileStreetNumber"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:inputType="number"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="67" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="City"
+                                    android:textColor="#000000" />
+
+                                <EditText
+                                    android:id="@+id/userProfileCity"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="Ra'anana" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="40dp"
+                                    android:padding="10dp"
+                                    android:text="Zip Code"
+                                    android:textColor="#000000" />
+
+                                <EditText
+                                    android:id="@+id/userProfileZipCode"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:inputType="number"
+                                    android:textColor="@color/colorDarkBrown"
+                                    android:textSize="15sp"
+                                    tools:text="43581209" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

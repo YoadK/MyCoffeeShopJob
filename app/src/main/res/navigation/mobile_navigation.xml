@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mycoffeeshop.Fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_shoppingCart"
+        android:name="com.example.mycoffeeshop.Fragments.ShoppingCartFragment"
+        android:label="@string/title_shoppingCart"
+        tools:layout="@layout/fragment_shoppingcart" />
+
+    <fragment
+        android:id="@+id/navigation_userprofile"
+        android:name="com.example.mycoffeeshop.Fragments.UserProfileFragment"
+        android:label="@string/title_userprofile"
+        tools:layout="@layout/fragment_userprofile" />
+
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.example.mycoffeeshop.Fragments.OrdersFragment"
+        android:label="@string/title_orders"
+        tools:layout="@layout/fragment_orders" />
+
+    <fragment
+        android:id="@+id/navigation_coffee_assistant"
+        android:name="com.example.mycoffeeshop.Fragments.CoffeeAssistantFragment"
+        android:label="@string/title_coffee_assistant_wizard"
+        tools:layout="@layout/fragment_coffee_assistant" />
+
+</navigation>
