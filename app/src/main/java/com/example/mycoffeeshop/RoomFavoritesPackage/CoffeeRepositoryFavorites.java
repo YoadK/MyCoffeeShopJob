@@ -58,12 +58,8 @@ public class CoffeeRepositoryFavorites {
         }
     }
 
-    void updatePlace(CoffeeFavorites coffeeFavorites) {
+    void updateCoffee(CoffeeFavorites coffeeFavorites) {
         new updateCoffeeAsyncTask(mCoffeeDaoFavorites).execute(coffeeFavorites);
-    }
-
-    CoffeeFavorites getExist(String name, double lat, double lng) {
-        return mCoffeeDaoFavorites.getItemById(name, lat, lng);
     }
 
     private static class deletePlaceAsyncTask extends AsyncTask<CoffeeFavorites, Void, Void> {
@@ -81,7 +77,7 @@ public class CoffeeRepositoryFavorites {
         }
     }
 
-    void deletePlace(CoffeeFavorites coffeeFavorites) {
+    void deleteCoffee(CoffeeFavorites coffeeFavorites) {
         new deletePlaceAsyncTask(mCoffeeDaoFavorites).execute(coffeeFavorites);
     }
 
@@ -100,14 +96,8 @@ public class CoffeeRepositoryFavorites {
         }
     }
 
-    void insertPlace(CoffeeFavorites coffeeFavorites) {
+    void insertCoffee(CoffeeFavorites coffeeFavorites) {
         new insertAsyncTask(mCoffeeDaoFavorites).execute(coffeeFavorites);
-    }
-
-    public void insertPlace(List<CoffeeFavorites> coffeeFavorites) {
-        for (CoffeeFavorites p : coffeeFavorites) {
-            insertPlace(p);
-        }
     }
 
 }

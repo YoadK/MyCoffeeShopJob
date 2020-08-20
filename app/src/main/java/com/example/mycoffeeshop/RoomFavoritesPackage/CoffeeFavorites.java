@@ -8,15 +8,15 @@ import androidx.annotation.NonNull;
 
 import java.io.Serializable;
 
-@Entity(tableName = "coffee_table_favorites", indices = @Index(value = {"name"}, unique = true))
+@Entity(tableName = "coffee_table_favorites", indices = @Index(value = {"title"}, unique = true))
 public class CoffeeFavorites implements Serializable {
 
-    public CoffeeFavorites(@NonNull String mName, @NonNull String mAddress, double mLat, double mLng, String mPhoto) {
-        this.mName = mName;
-        this.mAddress = mAddress;
-        this.mLat = mLat;
-        this.mLng = mLng;
-        this.mPhoto = mPhoto;
+    public CoffeeFavorites(@NonNull String title, @NonNull String description, int price, int weight_unit, String img) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.weight_unit = weight_unit;
+        this.img = img;
     }
 
     public CoffeeFavorites() {
@@ -27,32 +27,20 @@ public class CoffeeFavorites implements Serializable {
     @ColumnInfo(name = "ID")
     private long ID;
 
-    @ColumnInfo(name = "name")
-    private String mName;
+    @ColumnInfo(name = "title")
+    private String title;
 
-    @ColumnInfo(name = "address")
-    private String mAddress;
+    @ColumnInfo(name = "description")
+    private String description;
 
-    @ColumnInfo(name = "photo")
-    private String mPhoto;
+    @ColumnInfo(name = "price")
+    private int price;
 
-    @ColumnInfo(name = "distance")
-    private String mDistance;
+    @ColumnInfo(name = "weight_unit")
+    private int weight_unit;
 
-    @ColumnInfo(name = "lat")
-    private double mLat;
-
-    @ColumnInfo(name = "lng")
-    private double mLng;
-
-    @ColumnInfo(name = "rating")
-    private double mRating;
-
-    @ColumnInfo(name = "user_ratings_total")
-    private int mUser_ratings_total;
-
-    @ColumnInfo(name = "opening_hours")
-    private boolean mIs_open;
+    @ColumnInfo(name = "img")
+    private String img;
 
 
     public long getID() {
@@ -63,79 +51,44 @@ public class CoffeeFavorites implements Serializable {
         this.ID = ID;
     }
 
-    @NonNull
-    public String getName() {
-        return mName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(@NonNull String mName) {
-        this.mName = mName;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    @NonNull
-    public String getAddress() {
-        return mAddress;
+    public String getDescription() {
+        return description;
     }
 
-    public void setAddress(@NonNull String mAddress) {
-        this.mAddress = mAddress;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getPhoto() {
-        return mPhoto;
+    public int getPrice() {
+        return price;
     }
 
-    public void setPhoto(String mPhoto) {
-        this.mPhoto = mPhoto;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-    @NonNull
-    public String getDistance() {
-        return mDistance;
+    public int getWeight_unit() {
+        return weight_unit;
     }
 
-    public void setDistance(@NonNull String mDistance) {
-        this.mDistance = mDistance;
+    public void setWeight_unit(int weight_unit) {
+        this.weight_unit = weight_unit;
     }
 
-    public double getLat() {
-        return mLat;
+    public String getImg() {
+        return img;
     }
 
-    public void setLat(double mLat) {
-        this.mLat = mLat;
-    }
-
-    public double getLng() {
-        return mLng;
-    }
-
-    public void setLng(double mLng) {
-        this.mLng = mLng;
-    }
-
-    public double getRating() {
-        return mRating;
-    }
-
-    public void setRating(double mRating) {
-        this.mRating = mRating;
-    }
-
-    public int getUser_ratings_total() {
-        return mUser_ratings_total;
-    }
-
-    public void setUser_ratings_total(int mUser_ratings_total) {
-        this.mUser_ratings_total = mUser_ratings_total;
-    }
-
-    public boolean getIs_open() {
-        return mIs_open;
-    }
-
-    public void setIs_open(boolean mIs_open) {
-        this.mIs_open = mIs_open;
+    public void setImg(String img) {
+        this.img = img;
     }
 
 }

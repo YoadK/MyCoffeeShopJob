@@ -22,18 +22,9 @@ public interface CoffeeDaoFavorites {
     @Query("DELETE FROM coffee_table_favorites")
     void deleteAll();
 
-    @Query("DELETE FROM coffee_table_favorites WHERE name= :name_")
-    void deleteByName(String name_);
-
-    @Query("DELETE FROM coffee_table_favorites WHERE ID= :id_")
-    void deleteByID(Long id_);
-
     @Query("SELECT * from coffee_table_favorites")
     LiveData<List<CoffeeFavorites>> getAllCoffee();
 
     @Update
     void update(CoffeeFavorites... coffeeFavorites);
-
-    @Query("SELECT * from coffee_table_favorites WHERE name= :name AND lat= :lat AND lng= :lng")
-    CoffeeFavorites getItemById(String name, double lat, double lng);
 }

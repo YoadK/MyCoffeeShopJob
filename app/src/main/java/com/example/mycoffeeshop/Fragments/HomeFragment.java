@@ -34,9 +34,7 @@ public class HomeFragment extends Fragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_home, container, false);
 
-
         initUI();
-
         initRecyclerView();
         getReadFirebase();
 
@@ -48,8 +46,6 @@ public class HomeFragment extends Fragment  {
 
         arrayList = new ArrayList<>();
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
-
-
     }
 
     private void initRecyclerView() {
@@ -103,16 +99,11 @@ public class HomeFragment extends Fragment  {
                 });
     }
 
-
-
-
     @Override
     public void onDestroy() {
         super.onDestroy();
 
         fireStoreListener.remove();
     }
-
-
 
 }

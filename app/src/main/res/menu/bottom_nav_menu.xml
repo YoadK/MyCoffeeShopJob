@@ -21,9 +21,8 @@
         android:icon="@drawable/ic_baseline_format_list_numbered_24"
         android:title="@string/title_orders" />
 
-
     <item
-        android:id="@+id/navigation_coffee_assistant"
-        android:icon="@drawable/ic_baseline_assistant_24"
-        android:title="@string/title_coffee_assistant_wizard" />
+        android:id="@+id/navigation_coffee_favorites"
+        android:icon="@drawable/ic_baseline_stars_24"
+        android:title="@string/title_coffee_favorites" />
 </menu>

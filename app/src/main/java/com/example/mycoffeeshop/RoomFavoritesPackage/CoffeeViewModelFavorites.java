@@ -16,32 +16,24 @@ public class CoffeeViewModelFavorites extends AndroidViewModel {
         coffeeRepositoryFavorites = new CoffeeRepositoryFavorites(application);
     }
 
-    public LiveData<List<CoffeeFavorites>> getAllPlaces() {
+    public LiveData<List<CoffeeFavorites>> getAllCoffee() {
         return coffeeRepositoryFavorites.getAllCoffee();
     }
 
-    public void insertPlace(List<CoffeeFavorites> coffeeFavorites) {
-        coffeeRepositoryFavorites.insertPlace(coffeeFavorites);
-    }
-
-    public void insertPlace(CoffeeFavorites coffeeFavorites) {
-        coffeeRepositoryFavorites.insertPlace(coffeeFavorites);
+    public void insertCoffee(CoffeeFavorites coffeeFavorites) {
+        coffeeRepositoryFavorites.insertCoffee(coffeeFavorites);
     }
 
     public void deleteAll() {
         coffeeRepositoryFavorites.deleteLastSearch();
     }
 
-    public void deletePlace(CoffeeFavorites coffeeFavorites) {
-        coffeeRepositoryFavorites.deletePlace(coffeeFavorites);
+    public void deleteCoffee(CoffeeFavorites coffeeFavorites) {
+        coffeeRepositoryFavorites.deleteCoffee(coffeeFavorites);
     }
 
-    public void updatePlace(CoffeeFavorites coffeeFavorites) {
-        coffeeRepositoryFavorites.updatePlace(coffeeFavorites);
-    }
-
-    public CoffeeFavorites exist(String name, double lat, double lng) {
-        return coffeeRepositoryFavorites.getExist(name, lat, lng);
+    public void updateCoffee(CoffeeFavorites coffeeFavorites) {
+        coffeeRepositoryFavorites.updateCoffee(coffeeFavorites);
     }
 
 }

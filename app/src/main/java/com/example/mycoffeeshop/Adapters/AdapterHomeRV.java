@@ -16,7 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.mycoffeeshop.Models.ProductModel;
+import com.example.mycoffeeshop.OthersPackage.MyApplication;
 import com.example.mycoffeeshop.R;
+import com.example.mycoffeeshop.RoomFavoritesPackage.CoffeeFavorites;
+import com.example.mycoffeeshop.RoomFavoritesPackage.CoffeeViewModelFavorites;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -37,6 +40,7 @@ public class AdapterHomeRV extends RecyclerView.Adapter<AdapterHomeRV.ViewHolder
         private ImageView imageCoffee;
         private ImageButton imgAdd, imgDecrease;
         private Button addToCart_btn;
+        private ImageButton btnAddFavorites;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -50,6 +54,7 @@ public class AdapterHomeRV extends RecyclerView.Adapter<AdapterHomeRV.ViewHolder
             imgAdd = itemView.findViewById(R.id.plus_coffee_amount);
             imgDecrease = itemView.findViewById(R.id.minus_coffee_amount);
             addToCart_btn = itemView.findViewById(R.id.addToCart_btn);
+            btnAddFavorites = itemView.findViewById(R.id.btnAddFavorites);
         }
 
     }
@@ -61,6 +66,7 @@ public class AdapterHomeRV extends RecyclerView.Adapter<AdapterHomeRV.ViewHolder
     private FirebaseFirestore fireStoreDB = FirebaseFirestore.getInstance();
     private FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private CoffeeViewModelFavorites coffeeViewModelFavorites;
 
     //c'tor
     public AdapterHomeRV(ArrayList<ProductModel> list_data, Context context) {
@@ -85,6 +91,13 @@ public class AdapterHomeRV extends RecyclerView.Adapter<AdapterHomeRV.ViewHolder
         holder.weight.setText(String.valueOf(localProductModel.getWeight_unit()));
         Glide.with(mInflater.getContext()).load(localProductModel.getImg()).into(holder.imageCoffee);
         holder.numEditText.setText(String.valueOf(numQuantity));
+
+        holder.btnAddFavorites.setOnClickListener(view -> {
+            CoffeeFavorites placesFavorites = new CoffeeFavorites(localProductModel.getTitle(), localProductModel.getDescription(),
+                    localProductModel.getPrice(), localProductModel.getWeight_unit(), localProductModel.getImg());
+            coffeeViewModelFavorites = new CoffeeViewModelFavorites(MyApplication.getApplication());
+            coffeeViewModelFavorites.insertCoffee(placesFavorites);
+        });
 
         holder.imgAdd.setOnClickListener(v -> {
             numQuantity++;

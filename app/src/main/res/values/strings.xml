@@ -22,7 +22,7 @@
     <string name="registerImgContentDescription">register page image Content Description </string>
     <string name="registerPageTitle">Register page </string>
     <string name="btn_registerPage_title">Register</string>
-    <string name="title_coffee_assistant_wizard">Coffee assistant (Wizard)</string>
+    <string name="title_coffee_favorites">Coffee favorites</string>
     <string name="shopping_cart_current_total_price">Current total Price:</string>
     <string name="order_total_price">Total Price:</string>
 </resources>

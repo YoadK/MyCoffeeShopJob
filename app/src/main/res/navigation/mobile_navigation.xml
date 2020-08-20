@@ -30,9 +30,8 @@
         tools:layout="@layout/fragment_orders" />
 
     <fragment
-        android:id="@+id/navigation_coffee_assistant"
-        android:name="com.example.mycoffeeshop.Fragments.CoffeeAssistantFragment"
-        android:label="@string/title_coffee_assistant_wizard"
-        tools:layout="@layout/fragment_coffee_assistant" />
-
+        android:id="@+id/navigation_coffee_favorites"
+        android:name="com.example.mycoffeeshop.Fragments.FavoritesFragment"
+        android:label="@string/title_coffee_favorites"
+        tools:layout="@layout/fragment_coffee_favorites" />
 </navigation>
